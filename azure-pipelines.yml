@@ -25,5 +25,5 @@
 ***REMOVED***
 
 ***REMOVED***
-    mvn verify package sonar:sonar -Dsonar.host.url=https://sonarcloud.io/ -Dsonar.organization=hemanth3183 -Dsonar.projectKey=Hemanth3183_just-another-vulnerable-java-application -Dsonar.token=REDACTED
+    mvn verify package sonar:sonar -Dsonar.host.url=https://sonarcloud.io/ -Dsonar.organization=hemanth3183 -Dsonar.projectKey=hemanth3183_azdevops-java -Dsonar.token=REDACTED
   displayName: "SonarQube check"
