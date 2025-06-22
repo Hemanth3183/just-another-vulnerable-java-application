@@ -29,7 +29,8 @@
 ***REMOVED***
 ***REMOVED***
 ***REMOVED***
-    quality_status=$(curl -s -u REDACTED: https://sonarcloud.io/qualitygates/project_status?projectKey=hemanth3183_azdevops-java | jq -r '.projectStatus.status')
+    curl -u REDACTED: https://sonarcloud.io/qualitygates/project_status?projectKey=hemanth3183_azdevops-java
+    quality_status=$(curl -u REDACTED: https://sonarcloud.io/qualitygates/project_status?projectKey=hemanth3183_azdevops-java | jq -r '.projectStatus.status')
     echo Sonarqube quality status is: $quality_status
 ***REMOVED***
 ***REMOVED***
