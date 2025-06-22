@@ -26,4 +26,10 @@
 
 ***REMOVED***
     mvn verify package sonar:sonar -Dsonar.host.url=https://sonarcloud.io/ -Dsonar.organization=hemanth3183 -Dsonar.projectKey=hemanth3183_azdevops-java -Dsonar.token=REDACTED
-  displayName: "SonarQube check"
+***REMOVED***
+***REMOVED***
+***REMOVED***
+    quality_status=$(curl -s -u REDACTED: https://sonarcloud.io/qualitygates/project_status?projectKey=hemanth3183_azdevops-java | jq -r '.projectStatus.status')
+    echo Sonarqube quality status is: $quality_status
+***REMOVED***
+***REMOVED***
