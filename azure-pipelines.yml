@@ -29,7 +29,7 @@
 ***REMOVED***
 ***REMOVED***
 ***REMOVED***
-    export quality_status=$(curl -s -u REDACTED: https://sonarcloud.io/qualitygates/project_status?projectKey=hemanth3183_azdevops-java | jq -r '.projectStatus.status')
+    quality_status=$(curl -s -u REDACTED: https://sonarcloud.io/api/qualitygates/project_status?projectKey=hemanth3183_azdevops-java | jq -r '.projectStatus.status')
 ***REMOVED***
 ***REMOVED***
 ***REMOVED***
