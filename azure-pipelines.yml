@@ -10,16 +10,20 @@
 ***REMOVED***
 
 ***REMOVED***
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+***REMOVED***
+***REMOVED***
 
 ***REMOVED***
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+***REMOVED***
+***REMOVED***
+***REMOVED***
 
-- script: mvn clean package
-  displayName: "Building Azure DevOps app"
+***REMOVED***
+***REMOVED***
 
-- script: mvn clean test
-  displayName: "Testing Azure DevOps app"
+***REMOVED***
+***REMOVED***
+
+***REMOVED***
+    mvn verify package sonar:sonar -Dsonar.host.url=https://sonarcloud.io/ -Dsonar.organization=hemanth3183 -Dsonar.projectKey=Hemanth3183_just-another-vulnerable-java-application -Dsonar.token=REDACTED
+  displayName: "SonarQube check"
