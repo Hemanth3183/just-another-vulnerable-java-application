@@ -11,6 +11,9 @@
 
 ***REMOVED***
 ***REMOVED***
+
+***REMOVED***
+***REMOVED***
 ***REMOVED***
 
 ***REMOVED***
@@ -25,11 +28,11 @@
 ***REMOVED***
 
 ***REMOVED***
-    mvn verify package sonar:sonar -Dsonar.host.url=https://sonarcloud.io/ -Dsonar.organization=hemanth3183 -Dsonar.projectKey=hemanth3183_azdevops-java -Dsonar.token=REDACTED
+    mvn verify package sonar:sonar -Dsonar.host.url=https://sonarcloud.io/ -Dsonar.organization=hemanth3183 -Dsonar.projectKey=hemanth3183_azdevops-java -Dsonar.token=${variables.SONAR_TOKEN}
 ***REMOVED***
 ***REMOVED***
 ***REMOVED***
-    quality_status=$(curl -s -u REDACTED: https://sonarcloud.io/api/qualitygates/project_status?projectKey=hemanth3183_azdevops-java | jq -r '.projectStatus.status')
+    quality_status=$(curl -s -u ${variables.SONAR_TOKEN}: https://sonarcloud.io/api/qualitygates/project_status?projectKey=hemanth3183_azdevops-java | jq -r '.projectStatus.status')
 ***REMOVED***
 ***REMOVED***
 ***REMOVED***
