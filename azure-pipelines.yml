@@ -8,15 +8,17 @@ variables:
 - group: tokens
 
 steps:
- - script: |
-    mvn verify package sonar:sonar -Dsonar.host.url=https://sonarcloud.io/ \
-    -Dsonar.organization=hemanth3183 -Dsonar.projectKey=hemanth3183_azdevops-java \
-    -Dsonar.token=$(SONAR_TOKEN)
-    sleep 5
-    sudo apt update
-    sudo apt install curl jq
-    quality_status=$(curl -s -u $(SONAR_TOKEN): \
-    https://sonarcloud.io/api/qualitygates/project_status?projectKey=hemanth3183_azdevops-java | \
-    jq -r '.projectStatus.status')
-    echo "SonarCloud Analysis Status is $quality_status"; 
-    if [[ $quality_status == "ERROR" ]] ; then exit 1;fi
+  - script: |
+      mvn verify package sonar:sonar -Dsonar.host.url=https://sonarcloud.io/ \
+      -Dsonar.organization=hemanth3183 -Dsonar.projectKey=hemanth3183_azdevops-java \
+      -Dsonar.token=$(SONAR_TOKEN)
+      sleep 5
+      sudo apt update
+      sudo apt install curl jq
+      quality_status=$(curl -s -u $(SONAR_TOKEN): \
+      https://sonarcloud.io/api/qualitygates/project_status?projectKey=hemanth3183_azdevops-java | \
+      jq -r '.projectStatus.status')
+      echo "SonarCloud Analysis Status is $quality_status"; 
+      if [[ $quality_status == "ERROR" ]] ; then exit 1;fi
+    displayName: "SonarQube SAST scan and Quality gate check"
+  
