@@ -1,42 +1,19 @@
-***REMOVED***
-***REMOVED***
-***REMOVED***
-***REMOVED***
+trigger:
+  - master
 
-***REMOVED***
-***REMOVED***
+pool:
+  vmImage: ubuntu-latest
 
-***REMOVED***
-***REMOVED***
+variables:
+- group: tokens
 
-***REMOVED***
-***REMOVED***
-
-***REMOVED***
-***REMOVED***
-***REMOVED***
-
-***REMOVED***
-***REMOVED***
-***REMOVED***
-***REMOVED***
-
-***REMOVED***
-***REMOVED***
-
-***REMOVED***
-***REMOVED***
-
-***REMOVED***
-***REMOVED***
-***REMOVED***
-***REMOVED***
-***REMOVED***
-***REMOVED***
-***REMOVED***
-***REMOVED***
-***REMOVED***
-***REMOVED***
-***REMOVED***
-***REMOVED***
-***REMOVED***
+steps:
+ - script: |
+     mvn verify package sonar:sonar -Dsonar.host.url=https://sonarcloud.io/ \
+     -Dsonar.organization=hemanth3183 -Dsonar.projectKey=hemanth3183_azdevops-java \
+     -Dsonar.token=$(SONAR_TOKEN)
+     sudo apt update
+     sudo apt install curl jq
+     quality_status=$(curl -s -u $(SONAR_TOKEN): \
+     https://sonarcloud.io/api/qualitygates/project_status?projectKey=hemanth3183_azdevops-java | \
+     jq -r '.projectStatus.status')
