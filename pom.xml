@@ -113,25 +113,23 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-maven-plugin</artifactId>
 		</plugin>
-			<plugin>
-			      <groupId>io.snyk</groupId>
-			      <artifactId>snyk-maven-plugin</artifactId>
-			      <version>2.0.0</version>
-			      <inherited>false</inherited>
-			      <configuration>
-			        <org>asecurityguru</org>
-			      </configuration>
-		    	</plugin>
+		<plugin>
+					<groupId>io.snyk</groupId>
+					<artifactId>snyk-maven-plugin</artifactId>
+					<version>2.0.0</version>
+					<inherited>false</inherited>
+					<configuration>
+						<org>hemanth3183</org>
+					</configuration>
+				</plugin>
 <!-- Snyk Changes for SCA Ends Here -->
 
 
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
+		<plugin>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-maven-plugin</artifactId>
+		</plugin>
 	</plugins>
 	</plugins>
 	</build>
-	
-
 </project>
