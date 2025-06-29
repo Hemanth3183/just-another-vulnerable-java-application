@@ -1,0 +1,14 @@
+trigger:
+- main
+
+pool:
+ vmImage: ubuntu-latest
+
+variables:
+- group: tokens
+
+steps:
+  - script: |
+      export SNYK_TOKEN=$(SNYK_TOKEN)
+      mvn snyk:test -fn         # To run SCA scan using Snyk.
+    displayName: "Snyk scan"
